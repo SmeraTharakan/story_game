@@ -73,6 +73,8 @@ body {
     transform: scale(0.95);
     box-shadow: 0 3px 10px rgba(65, 105, 225, 0.5);
 }
+
+/* LOSE SCREEN */
 .lose-container {
     position: fixed;
     top: 0;
@@ -101,4 +103,108 @@ body {
     margin-top: 10px;
 }
 
+/* Settings Container */
+#settings-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
 
+/* Icon Styling */
+.icon {
+    width: 20px; /* Adjust as needed */
+    height: 20px;
+    background-color: #B2B2B2; /* Ashy color */
+    border-radius: 50%; /* Makes it a circle */
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s ease-in-out;
+}
+
+/* Hover Effect */
+.icon:hover {
+    transform: scale(1.1);
+}
+
+
+
+
+
+/* ---- 📌 Responsive Styles ---- */
+
+/* Small screens (max width: 480px) */
+@media (max-width: 480px) {
+    body {
+        background-position: left top; /* Moves background left */
+    }
+
+    #story-container {
+        max-width: 90%; /* Make it take up most of the screen */
+        padding: 20px;
+        font-size: 1.2rem;
+    }
+
+    .choice-btn {
+        font-size: 1rem;
+        width: 90%;
+        padding: 10px;
+    }
+
+    .lose-video {
+        width: 80vw; /* Smaller video */
+    }
+
+    .lose-text {
+        font-size: 1.5rem;
+    }
+}
+
+/* Tablets (max width: 768px) */
+@media (max-width: 768px) {
+    body {
+        background-position: left top; /* Moves background left */
+    }
+
+    #story-container {
+        max-width: 85%;
+        font-size: 1.4rem;
+    }
+
+    .choice-btn {
+        font-size: 1.2rem;
+        width: 80%;
+    }
+
+    .lose-video {
+        width: 60vw;
+    }
+}
+
+/* Laptops (max width: 992px) */
+@media (max-width: 992px) {
+    body {
+        background-position: center top;
+    }
+
+    #story-container {
+        max-width: 80%;
+        font-size: 1.5rem;
+    }
+
+    .choice-btn {
+        font-size: 1.3rem;
+        width: 75%;
+    }
+
+    .lose-video {
+        width: 50vw;
+    }
+}

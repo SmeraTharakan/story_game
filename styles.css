@@ -62,7 +62,7 @@ h2 {
 /* Small screens (max width: 480px) */
 @media (max-width: 480px) {
     body {
-        background-position: left center; 
+        background-position: left !important;
     }
 
     h1 {
@@ -83,7 +83,7 @@ h2 {
 /* Tablets (max width: 768px) */
 @media (max-width: 768px) {
     body {
-        background-position: left center; /* Align background to the left */
+        background-position: left !important; /* Align background to the left */
     }
 
     h1 {

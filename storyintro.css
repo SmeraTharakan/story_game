@@ -1,13 +1,14 @@
 body {
     background: url('assets/home.jpg') no-repeat center center fixed;
     background-size: cover;
+    background-position: center; /* Default for large screens */
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
     flex-direction: column; /* Aligns content vertically */
-    text-align: center;
+    text-align: justify;
 }
 
 /* Story Container */
@@ -17,7 +18,7 @@ body {
     border-radius: 15px;
     text-align: center;
     max-width: 700px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Adds a slight shadow */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     animation: fadeIn 1s ease-in-out;
 }
 
@@ -65,5 +66,70 @@ body {
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+/* ---- 📌 Responsive Styles ---- */
+
+/* Small screens (max width: 480px) */
+@media (max-width: 480px) {
+    body {
+        background-position: left !important; /* Moves background left */
+    }
+
+    .story-container {
+        max-width: 90%; /* Make it take up most of the screen */
+        padding: 15px;
+    }
+
+    #story-intro {
+        font-size: 1.2rem;
+        line-height: 1.4;
+    }
+
+    #start-button {
+        font-size: 1.2rem;
+        padding: 10px 25px;
+        border-radius: 10px;
+    }
+}
+
+/* Tablets (max width: 768px) */
+@media (max-width: 768px) {
+    body {
+        background-position: left !important; /* Moves background left */
+    }
+
+    .story-container {
+        max-width: 80%;
+    }
+
+    #story-intro {
+        font-size: 1.4rem;
+    }
+
+    #start-button {
+        font-size: 1.3rem;
+        padding: 12px 30px;
+    }
+}
+
+/* Laptops (max width: 992px) */
+@media (max-width: 992px) {
+    body {
+        background-position: center;
+    }
+
+    .story-container {
+        max-width: 75%;
+    }
+
+    #story-intro {
+        font-size: 1.5rem;
+    }
+
+    #start-button {
+        font-size: 1.4rem;
+        padding: 12px 35px;
     }
 }

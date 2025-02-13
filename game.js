@@ -1,6 +1,9 @@
 const storyText = document.getElementById("story-text");
 const choiceContainer = document.getElementById("choice-container");
 const gameContainer = document.getElementById("game-container");
+const settingsIcon = document.getElementById("settings-icon");
+const dropdownMenu = document.getElementById("dropdown-menu");
+
 
 const gameData = {
     step1: {
@@ -40,8 +43,7 @@ const gameData = {
         choices: {
             "Climb immediately": "step2A",
             "Look for another way": "step2B",
-            "Catapult using a tree": "step2C",
-            "Sniff for danger": "step2D"
+            "Catapult using a tree": "step2C"
         },
         background: "assets/nut2.jpg"
     },
@@ -364,6 +366,17 @@ function winGame(step) {
         gameContainer.appendChild(winContainer);
     }, 3000);
 }
+
+settingsIcon.addEventListener("click", () => {
+    dropdownMenu.style.display = dropdownMenu.style.display === "block" ? "none" : "block";
+});
+
+// Hide dropdown when clicking outside
+document.addEventListener("click", (event) => {
+    if (!settingsIcon.contains(event.target) && !dropdownMenu.contains(event.target)) {
+        dropdownMenu.style.display = "none";
+    }
+});
 
 // Start the game
 startStory("step1");
