@@ -1,34 +1,121 @@
-/* styles.css */
+@font-face {
+    font-family: "IceAgeFont";
+    src: url("assets/IceAgeMovieFont-KAqA.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
     background: url('assets/home.jpg') no-repeat center center fixed;
     background-size: cover;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column; /* Align elements vertically */
     text-align: center;
-    color: white;
-    font-family: 'Arial', sans-serif;
-}
-
-.game-container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
 }
 
 h1 {
     font-size: 3rem;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-family: "IceAgeFont", sans-serif; /* Apply the custom font */
+    color: white;
+    text-shadow: 3px 3px 10px rgba(0, 0, 50, 0.8); /* Adds a glowing blue effect */
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-family: "IceAgeFont", sans-serif; /* Apply the custom font */
+    color: white;
+    text-shadow: 3px 3px 10px rgba(0, 0, 50, 0.8); /* Adds a glowing blue effect */
+    margin-bottom: 20px;
 }
 
 #play-button {
     font-size: 1.5rem;
-    padding: 10px 20px;
-    background-color: #87CEEB; /* Sky blue */
+    padding: 12px 30px;
+    background: royalblue;
+    color: white;
     border: none;
-    border-radius: 10px;
+    border-radius: 15px;
     cursor: pointer;
-    transition: background 0.3s ease;
+    transition: transform 0.2s, box-shadow 0.2s;
+    font-weight: bold;
+    box-shadow: 0 5px 15px rgba(65, 105, 225, 0.5);
+    margin-top: 30px;
 }
 
 #play-button:hover {
-    background-color: #4682B4; /* Darker sky blue */
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(65, 105, 225, 0.8);
+}
+
+#play-button:active {
+    transform: scale(0.95);
+    box-shadow: 0 3px 10px rgba(65, 105, 225, 0.5);
+}
+
+/* Small screens (max width: 480px) */
+@media (max-width: 480px) {
+    body {
+        background-position: left center; 
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1rem;
+    }
+
+    #play-button {
+        font-size: 1rem;
+        padding: 10px 25px;
+        border-radius: 10px;
+    }
+}
+
+/* Tablets (max width: 768px) */
+@media (max-width: 768px) {
+    body {
+        background-position: left center; /* Align background to the left */
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 1.25rem;
+    }
+
+    #play-button {
+        font-size: 1.25rem;
+        padding: 12px 30px;
+    }
+}
+
+/* Laptops (max width: 992px) */
+@media (max-width: 992px) {
+    body {
+        background-position: center; /* Keep it centered for medium screens */
+    }
+
+    h1 {
+        font-size: 2.8rem;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
+
+    #play-button {
+        font-size: 1.4rem;
+        padding: 12px 35px;
+    }
 }

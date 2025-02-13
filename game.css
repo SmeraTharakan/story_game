@@ -1,0 +1,104 @@
+body {
+    background-size: cover;
+    background-position: center top; /* Keeps the center of the image visible */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end; /* Moves everything towards the bottom */
+    height: 100vh;
+    flex-direction: column; /* Aligns items in a vertical stack */
+}
+
+#game-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end; /* Aligns to bottom */
+}
+
+/* STORY TEXT BOX */
+#story-container {
+    background: rgba(173, 216, 230, 0.6); /* Frosted glass effect */
+    backdrop-filter: blur(10px); /* Adds a blur effect */
+    padding: 40px;
+    border-radius: 15px;
+    text-align: center;
+    max-width: 700px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    font-size: 1.6rem;
+    color: navy;
+    font-weight: bold;
+    line-height: 1.6;
+    margin-bottom: 40px; /* Creates spacing between text and choices */
+}
+
+/* CHOICE BUTTONS CONTAINER */
+#choice-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px; /* Creates spacing between buttons */
+    max-width: 800px;
+}
+
+/* BUTTONS */
+.choice-btn {
+    font-size: 1.3rem;
+    width: 300px;
+    padding: 12px;
+    background: royalblue;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    text-align: center;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.2s ease-in-out;
+    font-weight: bold;
+}
+
+/* Button Hover Effect */
+.choice-btn:hover {
+    background: dodgerblue;
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(65, 105, 225, 0.7);
+}
+
+/* Button Click Effect */
+.choice-btn:active {
+    transform: scale(0.95);
+    box-shadow: 0 3px 10px rgba(65, 105, 225, 0.5);
+}
+.lose-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.9); /* Dark overlay */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 1000;
+}
+
+.lose-video {
+    width: 50vw; /* Adjust size relative to the screen */
+    max-width: 500px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.lose-text {
+    color: white;
+    font-size: 2rem;
+    margin-top: 10px;
+}
+
+
