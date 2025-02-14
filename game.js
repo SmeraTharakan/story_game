@@ -269,11 +269,6 @@ function startStory(step) {
         return;
     }
 
-    if (step === "startPuzzle") {
-        startPuzzle();
-        return;
-    }
-
     document.body.style.backgroundImage = `url('${gameData[step].background}')`;
     storyText.innerText = gameData[step].text;
     choiceContainer.innerHTML = "";

@@ -1,15 +1,10 @@
 body {
     background-size: cover;
-    background-position: center top; /* Keeps the center of the image visible */
+    background-position: center top; 
     background-repeat: no-repeat;
     background-attachment: fixed;
     margin: 0;
     padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end; /* Moves everything towards the bottom */
-    height: 100vh;
-    flex-direction: column; /* Aligns items in a vertical stack */
 }
 
 #game-container {
@@ -17,13 +12,11 @@ body {
     height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: flex-end; /* Aligns to bottom */
+    align-items: flex-end; 
 }
 
-/* STORY TEXT BOX */
 #story-container {
-    background: rgba(173, 216, 230, 0.6); /* Frosted glass effect */
-    backdrop-filter: blur(10px); /* Adds a blur effect */
+    background: rgba(173, 216, 230, 0.6);
     padding: 40px;
     border-radius: 15px;
     text-align: center;
@@ -33,19 +26,17 @@ body {
     color: navy;
     font-weight: bold;
     line-height: 1.6;
-    margin-bottom: 40px; /* Creates spacing between text and choices */
+    margin-bottom: 40px; 
 }
 
-/* CHOICE BUTTONS CONTAINER */
 #choice-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 15px; /* Creates spacing between buttons */
+    gap: 15px;
     max-width: 800px;
 }
 
-/* BUTTONS */
 .choice-btn {
     font-size: 1.3rem;
     width: 300px;
@@ -56,32 +47,29 @@ body {
     border-radius: 20px;
     cursor: pointer;
     text-align: center;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 5px 10px rgba( 0, 0, 0, 0.3);
     transition: all 0.2s ease-in-out;
     font-weight: bold;
 }
 
-/* Button Hover Effect */
 .choice-btn:hover {
     background: dodgerblue;
     transform: scale(1.05);
     box-shadow: 0 8px 20px rgba(65, 105, 225, 0.7);
 }
 
-/* Button Click Effect */
 .choice-btn:active {
     transform: scale(0.95);
     box-shadow: 0 3px 10px rgba(65, 105, 225, 0.5);
 }
 
-/* LOSE SCREEN */
 .lose-container {
     position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: rgba(0, 0, 0, 0.9); /* Dark overlay */
+    background: rgba(0, 0, 0, 0.85); 
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -91,36 +79,35 @@ body {
 }
 
 .lose-video {
-    width: 50vw; /* Adjust size relative to the screen */
+    width: 50vw; 
     max-width: 500px;
     height: auto;
-    border-radius: 10px;
+    border-radius: 20px;
 }
 
 .lose-text {
     color: white;
     font-size: 2rem;
-    margin-top: 10px;
+    margin-top: 60px;
 }
 
-/* Settings Container */
 #settings-container {
     position: absolute;
     top: 20px;
     right: 20px;
     cursor: pointer;
-    height: 100px;
+    height: auto;
+    gap: 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
 }
 
-/* Icon Styling */
 .icon {
-    width: 20px; /* Adjust as needed */
+    width: 20px; 
     height: 20px;
-    background-color: #B2B2B2; /* Ashy color */
-    border-radius: 50%; /* Makes it a circle */
+    background-color: #B2B2B2;
+    border-radius: 50%; 
     padding: 10px;
     display: flex;
     justify-content: center;
@@ -129,58 +116,43 @@ body {
     transition: transform 0.2s ease-in-out;
 }
 
-/* Hover Effect */
 .icon:hover {
     transform: scale(1.1);
 }
 
+/* Responsiveness*/
 
-
-
-
-/* ---- 📌 Responsive Styles ---- */
-
-/* Small screens (max width: 480px) */
-@media (max-width: 480px) {
-    body {
-        background-position: left top; /* Moves background left */
-    }
-
+@media (max-width: 992px) {
+   
     #story-container {
-        max-width: 90%; /* Make it take up most of the screen */
-        padding: 20px;
-        font-size: 1.2rem;
+        max-width: 80%;
+        font-size: 1.5rem;
+        margin-bottom: 40px; 
     }
 
     .choice-btn {
-        font-size: 1rem;
-        width: 90%;
-        padding: 10px;
+        font-size: 1.3rem;
+        width: 50%;
     }
 
     .lose-video {
-        width: 80vw; /* Smaller video */
-    }
-
-    .lose-text {
-        font-size: 1.5rem;
+        width: 50vw;
     }
 }
 
-/* Tablets (max width: 768px) */
 @media (max-width: 768px) {
-    body {
-        background-position: left top; /* Moves background left */
-    }
+    
 
     #story-container {
-        max-width: 85%;
+        max-width: 80%;
         font-size: 1.4rem;
+        margin-bottom: 40px;
+
     }
 
     .choice-btn {
         font-size: 1.2rem;
-        width: 80%;
+        width: 60%;
     }
 
     .lose-video {
@@ -188,23 +160,27 @@ body {
     }
 }
 
-/* Laptops (max width: 992px) */
-@media (max-width: 992px) {
-    body {
-        background-position: center top;
-    }
+@media (max-width: 480px) {
+   
 
     #story-container {
         max-width: 80%;
-        font-size: 1.5rem;
+        padding: 20px;
+        font-size: 1.2rem;
+        margin-bottom: 30px;
     }
 
     .choice-btn {
-        font-size: 1.3rem;
-        width: 75%;
+        font-size: 1rem;
+        width: 80%;
+        padding: 10px;
     }
 
     .lose-video {
-        width: 50vw;
+        width: 80vw; 
+    }
+
+    .lose-text {
+        font-size: 1.5rem;
     }
 }
