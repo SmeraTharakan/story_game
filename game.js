@@ -247,7 +247,7 @@ const winData ={
         background:"assets/won.avif"
     },
     winCave :{
-        text:"Scrat carefully carries the glowing object outside… It’s a GIANT acorn! The ancient cave spirits reward him for his bravery. Scrat dances in victory as golden light sparkles around him!",
+        text:"Scrat finds a glowing object inside and he carefully carries the glowing object outside… It’s a GIANT acorn! The ancient cave spirits reward him for his bravery. Scrat dances in victory as golden light sparkles around him!",
         background:"assets/won.avif"
     },
 }

@@ -92,7 +92,7 @@ body {
 }
 
 #settings-container {
-    position: absolute;
+    position: fixed;
     top: 20px;
     right: 20px;
     cursor: pointer;
@@ -101,6 +101,10 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+}
+
+#dropdown-menu {
+    display: none;
 }
 
 .icon {
